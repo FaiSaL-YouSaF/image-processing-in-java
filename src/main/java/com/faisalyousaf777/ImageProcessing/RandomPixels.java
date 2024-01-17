@@ -122,13 +122,25 @@ public class RandomPixels {
 	public static BufferedImage createDiamondInImage(final int size, int imageType, final int bgColor, final int diamondColor) {
 		effectImage = new BufferedImage(size, size, imageType);
 		
+		int start, mid, end;
+		start = end = mid = (size/2) - 1;
+		
 		for (int row = 0; row < size; row++) {
 			for (int column = 0; column < size; column++) {
-				if (column < (size - row)) {
+				
+				if (column >= start && column <= end) {
 					effectImage.setRGB(column, row, diamondColor);
 				} else {
 					effectImage.setRGB(column, row, bgColor);
 				}
+			}
+
+			if (row < mid) {
+				start--;
+				end++;
+			} else {
+				start++;
+				end--;
 			}
 		}
 		return effectImage;
