@@ -1,11 +1,11 @@
-package com.faisalyousaf777.ImageProcessing;
+package com.faisalyousaf777.imageprocessing;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class ReadAndWriteImages {
+public class ReadAndWriteImage {
 	
 	public static void writeImageToDisk(BufferedImage effectImage, String formatName, String path) {
 		boolean isImageWritten = false;

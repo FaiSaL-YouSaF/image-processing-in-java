@@ -1,4 +1,4 @@
-package com.faisalyousaf777.ImageProcessing;
+package com.faisalyousaf777.imageprocessing;
 
 import java.awt.image.BufferedImage;
 

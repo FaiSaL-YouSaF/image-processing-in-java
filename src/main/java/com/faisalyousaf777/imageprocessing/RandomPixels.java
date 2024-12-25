@@ -1,8 +1,10 @@
-package com.faisalyousaf777.ImageProcessing;
+package com.faisalyousaf777.imageprocessing;
 
 import com.faisalyousaf777.ImageFilters;
 
 import java.awt.image.BufferedImage;
+
+import static com.faisalyousaf777.imageprocessing.commons.Common.packARGB;
 
 public class RandomPixels {
 	static BufferedImage effectImage;
@@ -19,7 +21,7 @@ public class RandomPixels {
 				int green = randomColorValueGenerator();
 				int blue = randomColorValueGenerator();
 				
-				int pixel = ImageFilters.packARGB(alpha, red, green, blue);
+				int pixel = packARGB(alpha, red, green, blue);
 				effectImage.setRGB(row, column, pixel);
 			}
 		}

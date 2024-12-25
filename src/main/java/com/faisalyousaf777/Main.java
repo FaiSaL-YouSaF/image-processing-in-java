@@ -1,12 +1,14 @@
 package com.faisalyousaf777;
 
-import com.faisalyousaf777.ImageProcessing.ImageTransform;
-import com.faisalyousaf777.ImageProcessing.ReadAndWriteImages;
+import com.faisalyousaf777.imageprocessing.ImageTransform;
+import com.faisalyousaf777.imageprocessing.ReadAndWriteImage;
 
 import java.awt.image.BufferedImage;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+
+import static com.faisalyousaf777.imageprocessing.commons.Common.PNG_FORMAT;
 
 public class Main {
 	public static void main(String[] args) {
@@ -16,9 +18,9 @@ public class Main {
 		int firstColor = 0xFFFFFF00;
 		int secondColor = 0xFF00FF00;
 		
-		BufferedImage sourceImage1 = ReadAndWriteImages.loadImageFromDisk(sourceImageLocation);
+		BufferedImage sourceImage1 = ReadAndWriteImage.loadImageFromDisk(sourceImageLocation);
 		BufferedImage effectImage1 = ImageTransform.applyMirrorEffect(sourceImage1);
-		ReadAndWriteImages.writeImageToDisk(effectImage1, ImageFilters.PNG_FORMAT, effectImageLocation);
+		ReadAndWriteImage.writeImageToDisk(effectImage1, PNG_FORMAT, effectImageLocation);
 
 	}
 }
